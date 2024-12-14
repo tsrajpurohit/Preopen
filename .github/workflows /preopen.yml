@@ -1,0 +1,50 @@
+name: Run indexhisto Script
+
+on:
+  schedule:
+    # Run every day at 10 PM IST, Monday to Friday
+    - cron: '30 14 * * 1-5'  # 8:00 PM IST
+    - cron: '30 15 * * 1-5'  # 9:00 PM IST
+    - cron: '30 16 * * 1-5'  # 10:00 PM IST
+    
+  workflow_dispatch:  # Allows manual trigger of the workflow
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt  # Install dependencies from requirements.txt
+
+      - name: Run script
+        env:
+          GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}  # Ensure this matches the secret's name in GitHub
+        run: python preopen.py  # Ensure the path to the script is correct
+
+      - name: Check Git status and file changes
+        run: |
+          git status -uall  # Show untracked files and all changes
+          ls -lR  # List all files and directories recursively
+
+      - name: Fix permissions on generated CSV files
+        run: |
+          chmod 644 combined_data.csv  # Ensure correct permissions for the CSV file
+
+      - name: Commit and push if changes are detected
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          
+          # Add and commit changes directly
+          git add combined_data.csv  # Ensure we are only adding the generated CSV file
+          git commit -m "Add or update CSV file" || echo "No changes to commit"  # Skip commit if no changes
+          git push
