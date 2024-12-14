@@ -10,7 +10,9 @@ import json
 # Setup basic logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Authenticate and connect to Google Sheets
+# Fetch credentials and Sheet ID from environment variables
+SHEET_ID = "1IUChF0UFKMqVLxTI69lXBi-g48f-oTYqI1K9miipKgY"
+
 def authenticate_google_sheets():
     """Authenticate and return Google Sheets client."""
     credentials_json = os.getenv('GOOGLE_SHEETS_CREDENTIALS')  # JSON string
@@ -64,8 +66,10 @@ def upload_to_google_sheets(sheet_id, tab_name, dataframe):
 def save_dataframe_to_csv(dataframe, file_name):
     """Save the provided DataFrame to a CSV file."""
     try:
-        os.makedirs("output", exist_ok=True)  # Create 'output' directory if it doesn't exist
-        file_path = os.path.join("output", file_name)
+        output_dir = "output"
+        if not os.path.exists(output_dir):
+            output_dir = os.path.dirname(os.path.abspath(__file__))  # Use script directory if 'output' does not exist
+        file_path = os.path.join(output_dir, file_name)
         dataframe.to_csv(file_path, index=False)
         logging.info(f"Data saved to CSV file: {file_path}")
     except Exception as e:
@@ -128,7 +132,6 @@ def fetch_nse_data_with_retry(fetch_function, *args, retries=3, delay=5):
 
 def save_all_data_to_google_sheets():
     """Fetch data from NSE API, process, and upload to Google Sheets."""
-    sheet_id = "1IUChF0UFKMqVLxTI69lXBi-g48f-oTYqI1K9miipKgY"
 
     try:
         # Fetch data from NSE APIs (directly as pandas DataFrames)
@@ -154,11 +157,11 @@ def save_all_data_to_google_sheets():
         payload_df = pd.DataFrame(payload_data)
 
         # Upload data to Google Sheets and save to CSV
-        upload_data_to_sheets(preopen_payload, "Preopen", sheet_id)
-        upload_data_to_sheets(preopen_movers, "Preopen Movers", sheet_id)
-        upload_data_to_sheets(gainers, "Pre_Nifty Gainers", sheet_id)
-        upload_data_to_sheets(movers, "pre_Nifty Movers", sheet_id)
-        upload_data_to_sheets(payload_df, "FO Preopen Data", sheet_id)
+        upload_data_to_sheets(preopen_payload, "Preopen", SHEET_ID)
+        upload_data_to_sheets(preopen_movers, "Preopen Movers", SHEET_ID)
+        upload_data_to_sheets(gainers, "Pre_Nifty Gainers", SHEET_ID)
+        upload_data_to_sheets(movers, "pre_Nifty Movers", SHEET_ID)
+        upload_data_to_sheets(payload_df, "FO Preopen Data", SHEET_ID)
 
     except Exception as e:
         logging.error(f"Error while saving data to Google Sheets: {e}")
