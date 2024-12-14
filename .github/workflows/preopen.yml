@@ -21,25 +21,32 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt  # Install dependencies from requirements.txt
-                
+
       - name: Run script
         env:
           GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}  # Ensure this matches the secret's name in GitHub
         run: python preopen.py  # Ensure the path to the script is correct
 
+      - name: Check if CSV files exist
+        run: |
+          ls -al  # List files in the current directory to confirm CSV files exist
+
       - name: Commit and push any modified .csv files
         run: |
-          # Add and commit all modified .csv files
+          # Configure git user
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           
-          # Find all .csv files and add them to the commit
-          csv_files=$(find . -type f -name "*.csv")
+          # List all .csv files
+          ls -al  # Confirm the CSV files are present
+
+          # Add all .csv files
+          git add *.csv  # Add all .csv files in the directory
           
-          if [ -n "$csv_files" ]; then
-            git add $csv_files
+          # Check if there are any changes to commit
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
             git commit -m "Add or update CSV files"
             git push
-          else
-            echo "No CSV files found. No changes to commit."
           fi
