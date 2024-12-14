@@ -66,12 +66,13 @@ def upload_to_google_sheets(sheet_id, tab_name, dataframe):
 def save_dataframe_to_csv(dataframe, file_name):
     """Save the provided DataFrame to a CSV file."""
     try:
-        script_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the current script
-        file_path = os.path.join(script_dir, file_name)
+        # Use the current directory to save the file
+        file_path = os.path.join(os.getcwd(), file_name)  # Get current working directory
         dataframe.to_csv(file_path, index=False)
         logging.info(f"Data saved to CSV file: {file_path}")
     except Exception as e:
         logging.error(f"Error saving data to CSV file '{file_name}': {e}")
+
 
 def validate_and_convert_to_dataframe(data, tab_name):
     """Ensure data is in DataFrame format, or convert it."""
