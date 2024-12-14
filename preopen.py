@@ -66,10 +66,8 @@ def upload_to_google_sheets(sheet_id, tab_name, dataframe):
 def save_dataframe_to_csv(dataframe, file_name):
     """Save the provided DataFrame to a CSV file."""
     try:
-        output_dir = "output"
-        if not os.path.exists(output_dir):
-            output_dir = os.path.dirname(os.path.abspath(__file__))  # Use script directory if 'output' does not exist
-        file_path = os.path.join(output_dir, file_name)
+        script_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the current script
+        file_path = os.path.join(script_dir, file_name)
         dataframe.to_csv(file_path, index=False)
         logging.info(f"Data saved to CSV file: {file_path}")
     except Exception as e:
