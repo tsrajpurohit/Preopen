@@ -1,1 +1,4 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
+EXIDEIND,EXIDEINDEQN,,450.0,10.3,2.34,439.7,67867,30540150,199908308250.0,620.35,278.5,450.0,https://nsearchives.nseindia.com/today/preOpen_EXIDEINDEQN.svg
+MPHASIS,MPHASISEQN,,3190.0,72.9,2.34,3117.1,6492,20709480,350835287674.49,3237.95,2187.0,3190.0,https://nsearchives.nseindia.com/today/preOpen_MPHASISEQN.svg
+LTTS,LTTSEQN,,5180.0,85.95,1.69,5094.05,1297,6718460,139196975797.62,6000.0,4200.0,5180.0,https://nsearchives.nseindia.com/today/preOpen_LTTSEQN.svg
