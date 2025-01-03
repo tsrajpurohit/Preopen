@@ -1,2 +1,3 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
-BANKINDIA,BANKINDIAEQN,,104.28,1.64,1.6,102.64,84401,8801336,124572758728.59,157.95,96.0,104.28,https://nsearchives.nseindia.com/today/preOpen_BANKINDIAEQN.svg
+DMART,DMARTEQN,,3840.0,228.9,6.34,3611.1,57112,219310080,534020303425.98,5484.85,3399.0,3840.0,https://nsearchives.nseindia.com/today/preOpen_DMARTEQN.svg
+SUPREMEIND,SUPREMEINDEQN,,4800.0,98.05,2.09,4701.95,247,1185600,304919418229.39,6460.0,3601.0,4800.0,https://nsearchives.nseindia.com/today/preOpen_SUPREMEINDEQN.svg
