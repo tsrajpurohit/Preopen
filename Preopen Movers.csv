@@ -1,3 +1,8 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
-DMART,DMARTEQN,,3840.0,228.9,6.34,3611.1,57112,219310080,534020303425.98,5484.85,3399.0,3840.0,https://nsearchives.nseindia.com/today/preOpen_DMARTEQN.svg
-SUPREMEIND,SUPREMEINDEQN,,4800.0,98.05,2.09,4701.95,247,1185600,304919418229.39,6460.0,3601.0,4800.0,https://nsearchives.nseindia.com/today/preOpen_SUPREMEINDEQN.svg
+NYKAA,NYKAAEQN,,175.09,7.25,4.32,167.84,100989,17682164,228559114493.85,229.8,139.8,175.09,https://nsearchives.nseindia.com/today/preOpen_NYKAAEQN.svg
+MPHASIS,MPHASISEQN,,2960.2,90.95,3.17,2869.25,2214,6553882,324080857274.16,3237.95,2187.0,2960.2,https://nsearchives.nseindia.com/today/preOpen_MPHASISEQN.svg
+AUBANK,AUBANKEQN,,590.9,17.35,3.03,573.55,53497,31611377,321194533446.08,813.4,534.45,590.9,https://nsearchives.nseindia.com/today/preOpen_AUBANKEQN.svg
+JUBLFOOD,JUBLFOODEQN,,779.15,20.05,2.64,759.1,53898,41994626,288429565901.68,774.8,421.05,779.15,https://nsearchives.nseindia.com/today/preOpen_JUBLFOODEQN.svg
+SBICARD,SBICARDEQN,,741.0,17.45,2.41,723.55,17614,13051974,215981377775.08,817.4,647.95,741.0,https://nsearchives.nseindia.com/today/preOpen_SBICARDEQN.svg
+LTIM,LTIMEQN,,5843.95,110.55,1.93,5733.4,3396,19846054,529699793361.99,6767.95,4513.55,5843.95,https://nsearchives.nseindia.com/today/preOpen_LTIMEQN.svg
+LODHA,LODHAEQN,,1421.0,21.45,1.53,1399.55,6253,8885513,390379019914.61,1649.95,977.35,1421.0,https://nsearchives.nseindia.com/today/preOpen_LODHAEQN.svg
