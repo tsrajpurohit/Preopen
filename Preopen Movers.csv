@@ -1,5 +1,4 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
-SRF,SRFEQN,,2500.0,149.05,6.34,2350.95,57791,144477500,341113810274.41,2693.95,2089.1,2500.0,https://nsearchives.nseindia.com/today/preOpen_SRFEQN.svg
-MANAPPURAM,MANAPPURAMEQN,,188.8,8.82,4.9,179.98,736108,138977190,98763825715.72,230.4,138.35,188.8,https://nsearchives.nseindia.com/today/preOpen_MANAPPURAMEQN.svg
-NAVINFLUOR,NAVINFLUOREQN,,3590.3,97.15,2.78,3493.15,5806,20845281,121552069346.37,3847.7,2875.95,3590.3,https://nsearchives.nseindia.com/today/preOpen_NAVINFLUOREQN.svg
-ZYDUSLIFE,ZYDUSLIFEEQN,,1005.0,23.55,2.4,981.45,25089,25214445,244603428285.8,1324.3,686.0,1005.0,https://nsearchives.nseindia.com/today/preOpen_ZYDUSLIFEEQN.svg
+TCS,TCSEQN,,4200.0,161.15,3.99,4038.85,117076,491719200,4127485947090.01,4592.25,3591.5,4200.0,https://nsearchives.nseindia.com/today/preOpen_TCSEQN.svg
+ATGL,ATGLEQN,,700.0,17.85,2.62,682.15,14265,9985500,189266954028.5,1190.0,545.75,700.0,https://nsearchives.nseindia.com/today/preOpen_ATGLEQN.svg
+MGL,MGLEQN,,1295.0,24.35,1.92,1270.65,21534,27886530,71676723372.59,1988.0,1075.25,1295.0,https://nsearchives.nseindia.com/today/preOpen_MGLEQN.svg
