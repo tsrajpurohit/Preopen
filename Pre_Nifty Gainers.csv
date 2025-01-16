@@ -1,2 +1,6 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
-POWERGRID,POWERGRIDEQN,,295.0,4.75,1.64,290.25,62790,18523050,1321002483661.66,366.25,226.05,295.0,https://nsearchives.nseindia.com/today/preOpen_POWERGRIDEQN.svg
+ADANIENT,ADANIENTEQN,,0,186.85,7.82,2388.15,0,0,591209072323.17,3743.9,2025.0,2575.0,https://nsearchives.nseindia.com/today/preOpen_ADANIENTEQN.svg
+HDFCLIFE,HDFCLIFEEQN,,0,35.85,6.03,594.2,0,0,633757876713.51,761.2,511.4,630.05,https://nsearchives.nseindia.com/today/preOpen_HDFCLIFEEQN.svg
+ADANIPORTS,ADANIPORTSEQN,,0,51.05,4.52,1128.9,0,0,830551094348.18,1621.4,995.65,1179.95,https://nsearchives.nseindia.com/today/preOpen_ADANIPORTSEQN.svg
+BEL,BELEQN,,0,6.15,2.3,267.85,0,0,957234338408.7,340.5,171.75,274.0,https://nsearchives.nseindia.com/today/preOpen_BELEQN.svg
+TRENT,TRENTEQN,,0,108.65,1.7,6390.25,0,0,1419084388263.34,8345.0,2955.0,6498.9,https://nsearchives.nseindia.com/today/preOpen_TRENTEQN.svg
