@@ -1,6 +1,5 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
-RELIANCE,RELIANCEEQN,,0,44.25,3.49,1266.45,0,0,8644158751695.39,1608.8,1201.5,1310.7,https://nsearchives.nseindia.com/today/preOpen_RELIANCEEQN.svg
-HFCL,HFCLEQN,,0,3.0,2.93,102.34,0,0,93936840012.01,171.0,80.25,105.34,https://nsearchives.nseindia.com/today/preOpen_HFCLEQN.svg
-SBICARD,SBICARDEQN,,0,12.25,1.63,752.75,0,0,227852588735.48,817.4,647.95,765.0,https://nsearchives.nseindia.com/today/preOpen_SBICARDEQN.svg
-ZOMATO,ZOMATOEQN,,0,3.9,1.61,241.9,0,0,1688269422693.51,304.7,121.6,245.8,https://nsearchives.nseindia.com/today/preOpen_ZOMATOEQN.svg
-INDHOTEL,INDHOTELEQN,,0,12.55,1.55,811.45,0,0,713781631806.25,894.9,450.6,824.0,https://nsearchives.nseindia.com/today/preOpen_INDHOTELEQN.svg
+RELIANCE,RELIANCEEQN,,1322.25,55.8,4.41,1266.45,1070391,1415324499,8644158751695.39,1608.8,1201.5,1322.25,https://nsearchives.nseindia.com/today/preOpen_RELIANCEEQN.svg
+HFCL,HFCLEQN,,106.0,3.66,3.58,102.34,358586,38010116,93936840012.01,171.0,80.25,106.0,https://nsearchives.nseindia.com/today/preOpen_HFCLEQN.svg
+TATACHEM,TATACHEMEQN,,995.0,22.55,2.32,972.45,9068,9022660,152366877875.27,1349.0,933.0,995.0,https://nsearchives.nseindia.com/today/preOpen_TATACHEMEQN.svg
+SBICARD,SBICARDEQN,,764.7,11.95,1.59,752.75,29010,22183947,227852588735.48,817.4,647.95,764.7,https://nsearchives.nseindia.com/today/preOpen_SBICARDEQN.svg
