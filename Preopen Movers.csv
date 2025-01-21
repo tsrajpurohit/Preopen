@@ -1,11 +1,4 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
-IDEA,IDEAEQN,,10.02,0.91,9.99,9.11,12196756,122211495,236123763930.87,19.18,6.61,10.02,https://nsearchives.nseindia.com/today/preOpen_IDEAEQN.svg
-KOTAKBANK,KOTAKBANKEQN,,1890.0,131.4,7.47,1758.6,625763,1182692070,2579665644516.58,1942.0,1543.85,1890.0,https://nsearchives.nseindia.com/today/preOpen_KOTAKBANKEQN.svg
-WIPRO,WIPROEQN,,302.0,20.05,7.11,281.95,439780,132813560,796782448853.99,320.0,208.5,302.0,https://nsearchives.nseindia.com/today/preOpen_WIPROEQN.svg
-INDUSTOWER,INDUSTOWEREQN,,380.4,17.7,4.88,362.7,394538,150082255,451659816694.32,460.35,206.0,380.4,https://nsearchives.nseindia.com/today/preOpen_INDUSTOWEREQN.svg
-KALYANKJIL,KALYANKJILEQN,,525.0,23.5,4.69,501.5,277068,145460700,192080917957.11,795.4,321.95,525.0,https://nsearchives.nseindia.com/today/preOpen_KALYANKJILEQN.svg
-PIIND,PIINDEQN,,3623.95,73.05,2.06,3550.9,1800,6523110,288071766009.88,4804.05,3220.0,3623.95,https://nsearchives.nseindia.com/today/preOpen_PIINDEQN.svg
-DELHIVERY,DELHIVERYEQN,,345.0,6.45,1.91,338.55,13151,4537095,171996634228.9,488.0,318.05,345.0,https://nsearchives.nseindia.com/today/preOpen_DELHIVERYEQN.svg
-HAVELLS,HAVELLSEQN,,1600.0,25.8,1.64,1574.2,3633,5812800,398237897444.81,2106.0,1280.0,1600.0,https://nsearchives.nseindia.com/today/preOpen_HAVELLSEQN.svg
-INDHOTEL,INDHOTELEQN,,826.65,13.3,1.64,813.35,98958,81803630,716415512366.42,894.9,450.6,826.65,https://nsearchives.nseindia.com/today/preOpen_INDHOTELEQN.svg
-ICICIGI,ICICIGIEQN,,1980.0,31.25,1.6,1948.75,15864,31410720,466470841161.39,2301.9,1410.05,1980.0,https://nsearchives.nseindia.com/today/preOpen_ICICIGIEQN.svg
+GNFC,GNFCEQN,,0,9.8,1.75,561.2,0,0,46803398086.01,776.6,516.3,571.0,https://nsearchives.nseindia.com/today/preOpen_GNFCEQN.svg
+CAMS,CAMSEQN,,0,69.05,1.56,4430.95,0,0,211036800794.24,5367.5,2660.6,4500.0,https://nsearchives.nseindia.com/today/preOpen_CAMSEQN.svg
+KALYANKJIL,KALYANKJILEQN,,0,8.1,1.53,530.9,0,0,202752080065.84,795.4,321.95,539.0,https://nsearchives.nseindia.com/today/preOpen_KALYANKJILEQN.svg
