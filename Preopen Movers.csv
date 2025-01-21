@@ -1,4 +1,4 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
-GNFC,GNFCEQN,,0,9.8,1.75,561.2,0,0,46803398086.01,776.6,516.3,571.0,https://nsearchives.nseindia.com/today/preOpen_GNFCEQN.svg
-CAMS,CAMSEQN,,0,69.05,1.56,4430.95,0,0,211036800794.24,5367.5,2660.6,4500.0,https://nsearchives.nseindia.com/today/preOpen_CAMSEQN.svg
-KALYANKJIL,KALYANKJILEQN,,0,8.1,1.53,530.9,0,0,202752080065.84,795.4,321.95,539.0,https://nsearchives.nseindia.com/today/preOpen_KALYANKJILEQN.svg
+APLAPOLLO,APLAPOLLOEQN,,1617.65,27.6,1.74,1590.05,3331,5388392,287487715829.37,1728.95,1305.0,1617.65,https://nsearchives.nseindia.com/today/preOpen_APLAPOLLOEQN.svg
+VBL,VBLEQN,,562.05,9.15,1.65,552.9,30312,17036859,740887955049.41,681.12,478.56,562.05,https://nsearchives.nseindia.com/today/preOpen_VBLEQN.svg
+CAMS,CAMSEQN,,4499.4,68.45,1.54,4430.95,2142,9637714,211036800794.24,5367.5,2660.6,4499.4,https://nsearchives.nseindia.com/today/preOpen_CAMSEQN.svg
