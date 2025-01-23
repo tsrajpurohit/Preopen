@@ -1,7 +1,6 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
-BPCL,BPCLEQN,,0,6.4,2.31,277.6,0,0,537941666654.49,376.0,230.05,284.0,https://nsearchives.nseindia.com/today/preOpen_BPCLEQN.svg
-PERSISTENT,PERSISTENTEQN,,0,126.9,2.23,5683.15,0,0,595224142665.75,6788.9,1965.5,5810.05,https://nsearchives.nseindia.com/today/preOpen_PERSISTENTEQN.svg
-KALYANKJIL,KALYANKJILEQN,,0,8.35,1.72,485.65,0,0,188982838635.22,795.4,321.95,494.0,https://nsearchives.nseindia.com/today/preOpen_KALYANKJILEQN.svg
-PIDILITIND,PIDILITINDEQN,,0,46.25,1.68,2754.75,0,0,422196952976.74,3415.0,2488.1,2801.0,https://nsearchives.nseindia.com/today/preOpen_PIDILITINDEQN.svg
-INDHOTEL,INDHOTELEQN,,0,12.15,1.57,772.75,0,0,677960856187.93,894.9,466.0,784.9,https://nsearchives.nseindia.com/today/preOpen_INDHOTELEQN.svg
-AUROPHARMA,AUROPHARMAEQN,,0,18.2,1.53,1191.8,0,0,333028370841.43,1592.0,958.5,1210.0,https://nsearchives.nseindia.com/today/preOpen_AUROPHARMAEQN.svg
+COFORGE,COFORGEEQN,,8710.0,481.8,5.86,8228.2,18201,158530710,546542642344.32,10026.8,4287.25,8710.0,https://nsearchives.nseindia.com/today/preOpen_COFORGEEQN.svg
+AUROPHARMA,AUROPHARMAEQN,,1215.0,23.2,1.95,1191.8,11396,13846140,333028370841.43,1592.0,958.5,1215.0,https://nsearchives.nseindia.com/today/preOpen_AUROPHARMAEQN.svg
+BPCL,BPCLEQN,,283.0,5.4,1.95,277.6,91470,25886010,537941666654.49,376.0,230.05,283.0,https://nsearchives.nseindia.com/today/preOpen_BPCLEQN.svg
+PERSISTENT,PERSISTENTEQN,,5790.0,106.85,1.88,5683.15,12754,73845660,595224142665.75,6788.9,1965.5,5790.0,https://nsearchives.nseindia.com/today/preOpen_PERSISTENTEQN.svg
+PIDILITIND,PIDILITINDEQN,,2800.95,46.2,1.68,2754.75,9995,27995495,422196952976.74,3415.0,2488.1,2800.95,https://nsearchives.nseindia.com/today/preOpen_PIDILITINDEQN.svg
