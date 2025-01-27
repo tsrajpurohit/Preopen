@@ -1,5 +1,3 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
-HINDPETRO,HINDPETROEQN,,374.2,12.1,3.34,362.1,117214,43861478,346276390949.54,457.15,277.67,374.2,https://nsearchives.nseindia.com/today/preOpen_HINDPETROEQN.svg
-IEX,IEXEQN,,171.99,4.54,2.71,167.45,45134,7762596,126922025168.83,244.4,130.2,171.99,https://nsearchives.nseindia.com/today/preOpen_IEXEQN.svg
-UNITDSPR,UNITDSPREQN,,1536.0,35.35,2.36,1500.65,40107,61604352,441498016073.82,1700.0,1054.7,1536.0,https://nsearchives.nseindia.com/today/preOpen_UNITDSPREQN.svg
-HFCL,HFCLEQN,,102.59,1.56,1.54,101.03,84227,8640847,92162203050.06,171.0,80.25,102.59,https://nsearchives.nseindia.com/today/preOpen_HFCLEQN.svg
+YESBANK,YESBANKEQN,,0,0.45,2.47,18.24,0,0,343176021198.0,32.85,17.06,18.69,https://nsearchives.nseindia.com/today/preOpen_YESBANKEQN.svg
+BANKINDIA,BANKINDIAEQN,,0,1.53,1.56,98.37,0,0,118998491314.67,157.95,90.05,99.9,https://nsearchives.nseindia.com/today/preOpen_BANKINDIAEQN.svg
