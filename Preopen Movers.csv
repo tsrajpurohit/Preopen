@@ -1,4 +1,6 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
-IGL,IGLEQN,,402.0,19.2,5.02,382.8,73117,29393034,133261341198.5,570.35,306.1,402.0,https://nsearchives.nseindia.com/today/preOpen_IGLEQN.svg
-GMRAIRPORT,GMRAIRPORTEQN,,73.0,1.94,2.73,71.06,86513,6315449,255036782325.84,103.75,68.9,73.0,https://nsearchives.nseindia.com/today/preOpen_GMRAIRPORTEQN.svg
-BPCL,BPCLEQN,,256.95,3.9,1.54,258.05,29327,7535572,500152376021.74,376.0,234.7,256.95,https://nsearchives.nseindia.com/today/preOpen_BPCLEQN.svg
+LAURUSLABS,LAURUSLABSEQN,,565.95,22.15,4.07,543.8,78084,44191639,217109733007.02,619.4,368.3,565.95,https://nsearchives.nseindia.com/today/preOpen_LAURUSLABSEQN.svg
+KPITTECH,KPITTECHEQN,,1420.0,49.95,3.65,1370.05,21841,31014220,223775940761.58,1928.7,1223.25,1420.0,https://nsearchives.nseindia.com/today/preOpen_KPITTECHEQN.svg
+SONACOMS,SONACOMSEQN,,515.8,13.55,2.7,502.25,11561,5963163,225216911144.61,768.65,493.35,515.8,https://nsearchives.nseindia.com/today/preOpen_SONACOMSEQN.svg
+EXIDEIND,EXIDEINDEQN,,360.05,6.95,1.97,353.1,22498,8100404,160446138125.0,620.35,290.35,360.05,https://nsearchives.nseindia.com/today/preOpen_EXIDEINDEQN.svg
+BAJAJFINSV,BAJAJFINSVEQN,,1825.0,34.6,1.93,1790.4,42563,77677475,976379522904.4,2029.9,1419.05,1825.0,https://nsearchives.nseindia.com/today/preOpen_BAJAJFINSVEQN.svg
