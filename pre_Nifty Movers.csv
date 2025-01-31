@@ -1,3 +1,4 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
-BEL,BELEQN,,0,6.2,2.22,278.75,0,0,1000809931425.81,340.5,171.75,284.95,https://nsearchives.nseindia.com/today/preOpen_BELEQN.svg
-TATAMOTORS,TATAMOTORSEQN,,0,12.15,1.74,696.85,0,0,1465319490268.96,1179.0,683.2,709.0,https://nsearchives.nseindia.com/today/preOpen_TATAMOTORSEQN.svg
+LT,LTEQN,,3501.05,80.1,2.34,3420.95,43342,151742509,4035607635339.26,3963.5,3175.05,3501.05,https://nsearchives.nseindia.com/today/preOpen_LTEQN.svg
+SHRIRAMFIN,SHRIRAMFINEQN,,546.4,10.6,1.98,538.3,12081,6601058,754927820557.29,730.45,438.6,546.4,https://nsearchives.nseindia.com/today/preOpen_SHRIRAMFINEQN.svg
+BEL,BELEQN,,283.9,5.15,1.85,278.75,411918,116943520,1000809931425.81,340.5,171.75,283.9,https://nsearchives.nseindia.com/today/preOpen_BELEQN.svg
