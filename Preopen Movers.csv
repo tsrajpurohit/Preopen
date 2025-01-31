@@ -1,6 +1,9 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
-LAURUSLABS,LAURUSLABSEQN,,565.95,22.15,4.07,543.8,78084,44191639,217109733007.02,619.4,368.3,565.95,https://nsearchives.nseindia.com/today/preOpen_LAURUSLABSEQN.svg
-KPITTECH,KPITTECHEQN,,1420.0,49.95,3.65,1370.05,21841,31014220,223775940761.58,1928.7,1223.25,1420.0,https://nsearchives.nseindia.com/today/preOpen_KPITTECHEQN.svg
-SONACOMS,SONACOMSEQN,,515.8,13.55,2.7,502.25,11561,5963163,225216911144.61,768.65,493.35,515.8,https://nsearchives.nseindia.com/today/preOpen_SONACOMSEQN.svg
-EXIDEIND,EXIDEINDEQN,,360.05,6.95,1.97,353.1,22498,8100404,160446138125.0,620.35,290.35,360.05,https://nsearchives.nseindia.com/today/preOpen_EXIDEINDEQN.svg
-BAJAJFINSV,BAJAJFINSVEQN,,1825.0,34.6,1.93,1790.4,42563,77677475,976379522904.4,2029.9,1419.05,1825.0,https://nsearchives.nseindia.com/today/preOpen_BAJAJFINSVEQN.svg
+NAVINFLUOR,NAVINFLUOREQN,,0,275.75,7.06,3908.25,0,0,136180112075.74,4017.1,2875.95,4184.0,https://nsearchives.nseindia.com/today/preOpen_NAVINFLUOREQN.svg
+BANKINDIA,BANKINDIAEQN,,0,4.67,4.2,111.23,0,0,134945743307.55,157.95,90.05,115.9,https://nsearchives.nseindia.com/today/preOpen_BANKINDIAEQN.svg
+AARTIIND,AARTIINDEQN,,0,14.0,3.2,438.0,0,0,89250803129.2,769.25,390.25,452.0,https://nsearchives.nseindia.com/today/preOpen_AARTIINDEQN.svg
+IRB,IRBEQN,,0,1.35,2.52,53.65,0,0,106653041579.7,78.15,45.06,55.0,https://nsearchives.nseindia.com/today/preOpen_IRBEQN.svg
+BEL,BELEQN,,0,6.2,2.22,278.75,0,0,1000809931425.81,340.5,171.75,284.95,https://nsearchives.nseindia.com/today/preOpen_BELEQN.svg
+RBLBANK,RBLBANKEQN,,0,3.5,2.15,162.5,0,0,96790842313.55,279.15,146.1,166.0,https://nsearchives.nseindia.com/today/preOpen_RBLBANKEQN.svg
+SOLARINDS,SOLARINDSEQN,,0,186.3,1.85,10063.7,0,0,245408710779.79,13298.0,6275.0,10250.0,https://nsearchives.nseindia.com/today/preOpen_SOLARINDSEQN.svg
+TATAMOTORS,TATAMOTORSEQN,,0,12.15,1.74,696.85,0,0,1465319490268.96,1179.0,683.2,709.0,https://nsearchives.nseindia.com/today/preOpen_TATAMOTORSEQN.svg
