@@ -1,9 +1,9 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
-CUMMINSIND,CUMMINSINDEQN,,0,145.8,4.99,2921.15,0,0,395666180078.4,4171.9,2291.05,3066.95,https://nsearchives.nseindia.com/today/preOpen_CUMMINSINDEQN.svg
-DLF,DLFEQN,,0,27.6,3.62,763.4,0,0,487945362579.73,967.6,687.05,791.0,https://nsearchives.nseindia.com/today/preOpen_DLFEQN.svg
-HINDCOPPER,HINDCOPPEREQN,,0,5.37,2.2,244.63,0,0,80186110415.29,415.8,216.76,250.0,https://nsearchives.nseindia.com/today/preOpen_HINDCOPPEREQN.svg
-INDIGO,INDIGOEQN,,0,89.6,2.03,4415.4,0,0,864154659653.67,5035.0,2984.2,4505.0,https://nsearchives.nseindia.com/today/preOpen_INDIGOEQN.svg
-NAUKRI,NAUKRIEQN,,0,158.85,2.0,7941.15,0,0,617888562734.43,9128.9,4969.55,8100.0,https://nsearchives.nseindia.com/today/preOpen_NAUKRIEQN.svg
-HINDPETRO,HINDPETROEQN,,0,5.7,1.66,342.9,0,0,328600918787.36,457.15,295.37,348.6,https://nsearchives.nseindia.com/today/preOpen_HINDPETROEQN.svg
-TRENT,TRENTEQN,,0,95.05,1.65,5749.95,0,0,1275135696839.41,8345.0,2955.0,5845.0,https://nsearchives.nseindia.com/today/preOpen_TRENTEQN.svg
-SOLARINDS,SOLARINDSEQN,,0,146.25,1.51,9653.75,0,0,235888157838.8,13298.0,6416.0,9800.0,https://nsearchives.nseindia.com/today/preOpen_SOLARINDSEQN.svg
+CUMMINSIND,CUMMINSINDEQN,,3067.0,145.85,4.99,2921.15,37282,114343894,395666180078.4,4171.9,2291.05,3067.0,https://nsearchives.nseindia.com/today/preOpen_CUMMINSINDEQN.svg
+DLF,DLFEQN,,791.0,27.6,3.62,763.4,71902,56874482,487945362579.73,967.6,687.05,791.0,https://nsearchives.nseindia.com/today/preOpen_DLFEQN.svg
+HINDCOPPER,HINDCOPPEREQN,,250.0,5.37,2.2,244.63,43982,10995500,80186110415.29,415.8,216.76,250.0,https://nsearchives.nseindia.com/today/preOpen_HINDCOPPEREQN.svg
+INDIGO,INDIGOEQN,,4505.0,89.6,2.03,4415.4,5665,25520825,864154659653.67,5035.0,2984.2,4505.0,https://nsearchives.nseindia.com/today/preOpen_INDIGOEQN.svg
+NAUKRI,NAUKRIEQN,,8100.0,158.85,2.0,7941.15,3226,26130600,617888562734.43,9128.9,4969.55,8100.0,https://nsearchives.nseindia.com/today/preOpen_NAUKRIEQN.svg
+HINDPETRO,HINDPETROEQN,,348.6,5.7,1.66,342.9,30459,10618007,328600918787.36,457.15,295.37,348.6,https://nsearchives.nseindia.com/today/preOpen_HINDPETROEQN.svg
+TRENT,TRENTEQN,,5845.0,95.05,1.65,5749.95,3389,19808705,1275135696839.41,8345.0,2955.0,5845.0,https://nsearchives.nseindia.com/today/preOpen_TRENTEQN.svg
+SOLARINDS,SOLARINDSEQN,,9800.0,146.25,1.51,9653.75,948,9290400,235888157838.8,13298.0,6416.0,9800.0,https://nsearchives.nseindia.com/today/preOpen_SOLARINDSEQN.svg
