@@ -1,2 +1,8 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
-LUPIN,LUPINEQN,,1920.0,28.95,1.53,1891.05,10602,20355840,455933352418.77,2402.9,1493.3,1920.0,https://nsearchives.nseindia.com/today/preOpen_LUPINEQN.svg
+KEI,KEIEQN,,3151.3,81.15,2.64,3070.15,6541,20612653,190882261496.0,5039.7,2900.1,3151.3,https://nsearchives.nseindia.com/today/preOpen_KEIEQN.svg
+POLYCAB,POLYCABEQN,,4830.75,117.35,2.49,4713.4,7594,36684715,236787706092.62,7605.0,4555.0,4830.75,https://nsearchives.nseindia.com/today/preOpen_POLYCABEQN.svg
+VOLTAS,VOLTASEQN,,1347.15,27.05,2.05,1320.1,10564,14231292,301152363079.1,1944.9,1023.95,1347.15,https://nsearchives.nseindia.com/today/preOpen_VOLTASEQN.svg
+SONACOMS,SONACOMSEQN,,503.95,10.05,2.03,493.9,7642,3851185,219282314070.93,768.65,475.05,503.95,https://nsearchives.nseindia.com/today/preOpen_SONACOMSEQN.svg
+TVSMOTOR,TVSMOTOREQN,,2268.95,43.45,1.95,2225.5,5472,12415694,523564398207.89,2958.0,1873.0,2268.95,https://nsearchives.nseindia.com/today/preOpen_TVSMOTOREQN.svg
+ULTRACEMCO,ULTRACEMCOEQN,,10319.25,190.8,1.88,10128.45,3186,32877130,1149189045590.79,12145.35,9250.0,10319.25,https://nsearchives.nseindia.com/today/preOpen_ULTRACEMCOEQN.svg
+MGL,MGLEQN,,1260.0,22.5,1.82,1237.5,2332,2938320,70120509251.82,1988.0,1075.25,1260.0,https://nsearchives.nseindia.com/today/preOpen_MGLEQN.svg
