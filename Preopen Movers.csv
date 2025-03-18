@@ -1,4 +1,6 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
-INDUSINDBK,INDUSINDBKEQN,,705.0,32.65,4.86,672.35,314631,221814855,443710664538.99,1576.35,606.0,705.0,https://nsearchives.nseindia.com/today/preOpen_INDUSINDBKEQN.svg
-MUTHOOTFIN,MUTHOOTFINEQN,,2232.0,35.65,1.62,2196.35,2344,5231808,234279029006.03,2334.8,1321.0,2232.0,https://nsearchives.nseindia.com/today/preOpen_MUTHOOTFINEQN.svg
-APLAPOLLO,APLAPOLLOEQN,,1395.0,22.2,1.62,1372.8,5285,7372575,246856600212.78,1728.95,1272.7,1395.0,https://nsearchives.nseindia.com/today/preOpen_APLAPOLLOEQN.svg
+NMDC,NMDCEQN,,66.06,1.15,1.77,64.91,256136,16920344,224552517587.91,95.45,59.7,66.06,https://nsearchives.nseindia.com/today/preOpen_NMDCEQN.svg
+HAL,HALEQN,,3500.0,60.1,1.75,3439.9,23645,82757500,652651962973.43,5674.75,2913.6,3500.0,https://nsearchives.nseindia.com/today/preOpen_HALEQN.svg
+MANAPPURAM,MANAPPURAMEQN,,213.0,3.38,1.61,209.62,284072,60507336,115482672993.36,230.4,138.35,213.0,https://nsearchives.nseindia.com/today/preOpen_MANAPPURAMEQN.svg
+BAJAJFINSV,BAJAJFINSVEQN,,1900.0,28.4,1.52,1871.6,34479,65510100,1024171651039.4,2029.9,1419.05,1900.0,https://nsearchives.nseindia.com/today/preOpen_BAJAJFINSVEQN.svg
+IREDA,IREDAEQN,,140.25,2.09,1.51,138.16,74502,10448905,92151571579.96,310.0,124.4,140.25,https://nsearchives.nseindia.com/today/preOpen_IREDAEQN.svg
