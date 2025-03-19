@@ -1,6 +1,5 @@
 symbol,identifier,purpose,lastPrice,change,pChange,previousClose,finalQuantity,totalTurnover,marketCap,yearHigh,yearLow,iep,chartTodayPath
-NMDC,NMDCEQN,,66.06,1.15,1.77,64.91,256136,16920344,224552517587.91,95.45,59.7,66.06,https://nsearchives.nseindia.com/today/preOpen_NMDCEQN.svg
-HAL,HALEQN,,3500.0,60.1,1.75,3439.9,23645,82757500,652651962973.43,5674.75,2913.6,3500.0,https://nsearchives.nseindia.com/today/preOpen_HALEQN.svg
-MANAPPURAM,MANAPPURAMEQN,,213.0,3.38,1.61,209.62,284072,60507336,115482672993.36,230.4,138.35,213.0,https://nsearchives.nseindia.com/today/preOpen_MANAPPURAMEQN.svg
-BAJAJFINSV,BAJAJFINSVEQN,,1900.0,28.4,1.52,1871.6,34479,65510100,1024171651039.4,2029.9,1419.05,1900.0,https://nsearchives.nseindia.com/today/preOpen_BAJAJFINSVEQN.svg
-IREDA,IREDAEQN,,140.25,2.09,1.51,138.16,74502,10448905,92151571579.96,310.0,124.4,140.25,https://nsearchives.nseindia.com/today/preOpen_IREDAEQN.svg
+SAIL,SAILEQN,,113.5,4.59,4.21,108.91,1139486,129331661,156617981906.08,175.35,99.15,113.5,https://nsearchives.nseindia.com/today/preOpen_SAILEQN.svg
+ZYDUSLIFE,ZYDUSLIFEEQN,,928.0,25.85,2.87,902.15,23859,22141152,225796419794.64,1324.3,855.1,928.0,https://nsearchives.nseindia.com/today/preOpen_ZYDUSLIFEEQN.svg
+IDEA,IDEAEQN,,7.25,0.15,2.11,7.1,2592338,18794450,189085661884.23,19.18,6.61,7.25,https://nsearchives.nseindia.com/today/preOpen_IDEAEQN.svg
+JSWSTEEL,JSWSTEELEQN,,1036.0,17.95,1.76,1018.05,39599,41024564,974221371783.83,1063.0,778.5,1036.0,https://nsearchives.nseindia.com/today/preOpen_JSWSTEELEQN.svg
