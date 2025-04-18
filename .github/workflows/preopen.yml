@@ -1,4 +1,4 @@
-name: Run event Script
+name: Run preopen Script
 
 on:
   schedule:
