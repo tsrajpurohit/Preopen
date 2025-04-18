@@ -173,13 +173,25 @@ if nse_data and "data" in nse_data:
     df = pd.DataFrame(cleaned_data)
     
     # Upload the detailed data to Google Sheets
+    # Remove duplicates based on 'symbol', 'preOpenPrice', 'buyQty', and 'sellQty'
+    df = df.drop_duplicates(subset=['symbol', 'preOpenPrice', 'buyQty', 'sellQty'], keep='first')
+    
+    # Upload the cleaned data to Google Sheets
     upload_to_google_sheets(SHEET_ID, "Preopen", df)
+
+    # Save the Preopen data to a CSV file
+    df.to_csv("preopen.csv", index=False)
+    logging.info("Preopen data saved to 'preopen.csv'.")
 
     # Convert the summary data to DataFrame for Advances, Declines, Unchanged
     preopen_summary_df = pd.DataFrame([preopen_summary])
 
     # Upload the summary data to Google Sheets
     upload_to_google_sheets(SHEET_ID, "FO Preopen Data", preopen_summary_df)
+
+    # Save the FO Preopen data to a CSV file
+    preopen_summary_df.to_csv("FO Preopen Data.csv", index=False)
+    logging.info("FO Preopen data saved to 'FO Preopen Data.csv'.")
 
 else:
     logging.error("No 'data' found in the response.")
