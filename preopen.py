@@ -174,7 +174,13 @@ if nse_data and "data" in nse_data:
     
     # Upload the detailed data to Google Sheets
     # Remove duplicates based on 'symbol', 'preOpenPrice', 'buyQty', and 'sellQty'
-    df = df.drop_duplicates(subset=['symbol', 'preOpenPrice', 'buyQty', 'sellQty'], keep='first')
+    # Remove duplicates based on 'symbol', 'preOpenPrice', 'buyQty', and 'sellQty'
+    df = df.drop_duplicates(subset=['symbol', 'pChange', 'lastPrice', 'previousClose'], keep='first')
+    
+    # Save the cleaned data to a CSV file without duplicates
+    df.to_csv("preopen_data.csv", index=False)
+    logging.info("Preopen data saved to 'preopen_data.csv' without duplicates.")
+
     
     # Upload the cleaned data to Google Sheets
     upload_to_google_sheets(SHEET_ID, "Preopen", df)
