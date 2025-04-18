@@ -172,22 +172,15 @@ if nse_data and "data" in nse_data:
     # Convert cleaned data to DataFrame
     df = pd.DataFrame(cleaned_data)
     
-    # Upload the detailed data to Google Sheets
-    # Remove duplicates based on 'symbol', 'preOpenPrice', 'buyQty', and 'sellQty'
     # Remove duplicates based on 'symbol', 'preOpenPrice', 'buyQty', and 'sellQty'
     df = df.drop_duplicates(subset=['symbol', 'pChange', 'lastPrice', 'previousClose'], keep='first')
-    
-    # Save the cleaned data to a CSV file without duplicates
-    df.to_csv("preopen_data.csv", index=False)
-    logging.info("Preopen data saved to 'preopen_data.csv' without duplicates.")
-
-    
+        
     # Upload the cleaned data to Google Sheets
     upload_to_google_sheets(SHEET_ID, "Preopen", df)
 
     # Save the Preopen data to a CSV file
-    df.to_csv("preopen.csv", index=False)
-    logging.info("Preopen data saved to 'preopen.csv'.")
+    df.to_csv("Preopen.csv", index=False)
+    logging.info("Preopen data saved to 'Preopen.csv'.")
 
     # Convert the summary data to DataFrame for Advances, Declines, Unchanged
     preopen_summary_df = pd.DataFrame([preopen_summary])
