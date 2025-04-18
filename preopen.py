@@ -1,11 +1,10 @@
-import pandas as pd
-import gspread
-from google.oauth2.service_account import Credentials
-from nsepython import *
-import logging
-import time
 import os
 import json
+import logging
+import pandas as pd
+import gspread
+from google.auth.transport.requests import Request
+from google.oauth2.service_account import Credentials
 
 # Setup basic logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -63,62 +62,40 @@ def upload_to_google_sheets(sheet_id, tab_name, dataframe):
     worksheet.update([dataframe.columns.values.tolist()] + dataframe.values.tolist())
     logging.info(f"Data uploaded to '{tab_name}' successfully.")
 
-def save_dataframe_to_csv(dataframe, file_name):
-    """Save the provided DataFrame to a CSV file."""
-    try:
-        # Use the current directory to save the file
-        file_path = os.path.join(os.getcwd(), file_name)  # Get current working directory
-        dataframe.to_csv(file_path, index=False)
-        logging.info(f"Data saved to CSV file: {file_path}")
-    except Exception as e:
-        logging.error(f"Error saving data to CSV file '{file_name}': {e}")
-
-
-def validate_and_convert_to_dataframe(data, tab_name):
-    """Ensure data is in DataFrame format, or convert it."""
-    logging.info(f"Validating data for {tab_name}, type: {type(data)}")
-
-    if isinstance(data, pd.DataFrame):
-        logging.info(f"{tab_name} data is already a DataFrame.")
-        return data
-    elif isinstance(data, tuple):
-        logging.warning(f"{tab_name} data returned as tuple, examining content: {data}")
-        if len(data) > 0 and isinstance(data[0], pd.DataFrame):
-            return data[0]  # Extract the DataFrame from the tuple
-        else:
-            logging.warning(f"Unable to extract DataFrame from tuple for {tab_name}. Skipping.")
-            return None
-    elif isinstance(data, list):
-        try:
-            return pd.DataFrame(data)
-        except Exception as e:
-            logging.error(f"Error converting {tab_name} data to DataFrame: {e}")
-            return None
-    elif isinstance(data, dict):
-        try:
-            return pd.DataFrame([data])  # Convert dict to DataFrame (single-row)
-        except Exception as e:
-            logging.error(f"Error converting dictionary data for {tab_name} to DataFrame: {e}")
-            return None
-    elif isinstance(data, str):
-        try:
-            return pd.read_json(data)
-        except Exception as e:
-            logging.error(f"Error converting string data for {tab_name} to DataFrame: {e}")
-            return None
-    else:
-        logging.warning(f"Unexpected data format for {tab_name}. Skipping.")
-        return None
-
-def fetch_nse_data_with_retry(fetch_function, *args, retries=3, delay=5):
+# Function to fetch data from NSE and save to CSV
+def fetch_nse_data_with_retry(url, retries=3, delay=5):
     """Fetch data from NSE API with retries in case of failure."""
+    import requests
+    import time
+
     attempt = 0
     while attempt < retries:
         try:
-            logging.info(f"Fetching data with args: {args}")
-            result = fetch_function(*args)  # Do not pass 'pandas' here
-            logging.info(f"Data fetched successfully: {type(result)}")
-            return result
+            # Initialize the session and set headers
+            session = requests.Session()
+            headers = {
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/json",
+                "Referer": "https://www.nseindia.com",
+            }
+            session.headers.update(headers)
+
+            # First, access the general page to get cookies
+            logging.info("Accessing main NSE page to fetch cookies...")
+            session.get("https://www.nseindia.com/market-data/pre-open-market-cm-and-emerge-market", timeout=10)
+
+            # Now, access the FO data API
+            logging.info(f"Fetching data from: {url}")
+            response = session.get(url, timeout=10)
+
+            # Check if the response is valid
+            if response.status_code == 200:
+                logging.info(f"Data fetched successfully: {type(response)}")
+                return response.json()  # Return the JSON response
+            else:
+                logging.error(f"Failed to fetch data. Status code: {response.status_code}")
+                raise ValueError(f"Failed to fetch data from {url}. Status code: {response.status_code}")
+
         except Exception as e:
             attempt += 1
             logging.error(f"Attempt {attempt} failed: {e}")
@@ -129,53 +106,80 @@ def fetch_nse_data_with_retry(fetch_function, *args, retries=3, delay=5):
                 logging.error(f"Failed after {retries} attempts.")
                 raise
 
-def save_all_data_to_google_sheets():
-    """Fetch data from NSE API, process, and upload to Google Sheets."""
+# Fetch FO data from NSE
+url_fo = "https://www.nseindia.com/api/market-data-pre-open?key=FO"
+nse_data = fetch_nse_data_with_retry(url_fo)
 
-    try:
-        # Fetch data from NSE APIs (directly as pandas DataFrames)
-        preopen_payload = fetch_nse_data_with_retry(nse_preopen, "FO")  # Fetch without 'pandas'
-        preopen_movers = fetch_nse_data_with_retry(nse_preopen_movers, "FO")  # Fetch without 'pandas'
-        gainers = fetch_nse_data_with_retry(nse_preopen_movers, "NIFTY")  # Fetch without 'pandas'
-        movers = fetch_nse_data_with_retry(nse_preopen_movers, "NIFTY")  # Fetch without 'pandas'
+if nse_data and "data" in nse_data:
+    # Initialize lists for storing the cleaned data
+    cleaned_data = []
+    preopen_summary = {}
 
-        # Fetch 'FO' segment preopen data to extract "advances", "declines", "unchanged"
-        payload = nse_preopen("FO", "raw")  # Use "raw" format for the payload
-        advances = payload.get("advances", [])
-        declines = payload.get("declines", [])
-        unchanged = payload.get("unchanged", [])
+    # Extract the summary for Advance, Declines, Unchanged
+    if "advances" in nse_data:
+        preopen_summary["Advances"] = nse_data["advances"]
+    if "declines" in nse_data:
+        preopen_summary["Declines"] = nse_data["declines"]
+    if "unchanged" in nse_data:
+        preopen_summary["Unchanged"] = nse_data["unchanged"]
 
-        # Ensure each key has a corresponding list (even if empty)
-        payload_data = {
-            "Advances": advances if isinstance(advances, list) else [advances],
-            "Declines": declines if isinstance(declines, list) else [declines],
-            "Unchanged": unchanged if isinstance(unchanged, list) else [unchanged]
-        }
+    # Process each item in the "data" list
+    for item in nse_data["data"]:
+        # Extract metadata
+        symbol = item["metadata"]["symbol"]
+        identifier = item["metadata"]["identifier"]
+        purpose = item["metadata"]["purpose"]
+        last_price = item["metadata"]["lastPrice"]
+        change = item["metadata"]["change"]
+        p_change = item["metadata"]["pChange"]
+        previous_close = item["metadata"]["previousClose"]
+        final_quantity = item["metadata"]["finalQuantity"]
+        total_turnover = item["metadata"]["totalTurnover"]
+        market_cap = item["metadata"]["marketCap"]
+        year_high = item["metadata"]["yearHigh"]
+        year_low = item["metadata"]["yearLow"]
+        iep = item["metadata"]["iep"]
+        chart_today_path = item["metadata"]["chartTodayPath"]
 
-        # Convert to DataFrame
-        payload_df = pd.DataFrame(payload_data)
+        # Extract pre-open market data
+        pre_open_data = item["detail"]["preOpenMarket"]["preopen"]
+        for pre_open in pre_open_data:
+            price = pre_open["price"]
+            buy_qty = pre_open["buyQty"]
+            sell_qty = pre_open["sellQty"]
+            
+            # Append the data as a row in the cleaned data list
+            cleaned_data.append({
+                "symbol": symbol,
+                "identifier": identifier,
+                "purpose": purpose,
+                "lastPrice": last_price,
+                "change": change,
+                "pChange": p_change,
+                "previousClose": previous_close,
+                "finalQuantity": final_quantity,
+                "totalTurnover": total_turnover,
+                "marketCap": market_cap,
+                "yearHigh": year_high,
+                "yearLow": year_low,
+                "iep": iep,
+                "chartTodayPath": chart_today_path,
+                "preOpenPrice": price,
+                "buyQty": buy_qty,
+                "sellQty": sell_qty
+            })
+    
+    # Convert cleaned data to DataFrame
+    df = pd.DataFrame(cleaned_data)
+    
+    # Upload the detailed data to Google Sheets
+    upload_to_google_sheets(SHEET_ID, "Preopen", df)
 
-        # Upload data to Google Sheets and save to CSV
-        upload_data_to_sheets(preopen_payload, "Preopen", SHEET_ID)
-        upload_data_to_sheets(preopen_movers, "Preopen Movers", SHEET_ID)
-        upload_data_to_sheets(gainers, "Pre_Nifty Gainers", SHEET_ID)
-        upload_data_to_sheets(movers, "pre_Nifty Movers", SHEET_ID)
-        upload_data_to_sheets(payload_df, "FO Preopen Data", SHEET_ID)
+    # Convert the summary data to DataFrame for Advances, Declines, Unchanged
+    preopen_summary_df = pd.DataFrame([preopen_summary])
 
-    except Exception as e:
-        logging.error(f"Error while saving data to Google Sheets: {e}")
+    # Upload the summary data to Google Sheets
+    upload_to_google_sheets(SHEET_ID, "FO Preopen Data", preopen_summary_df)
 
-def upload_data_to_sheets(data, tab_name, sheet_id):
-    """Validate and upload data to Google Sheets and save to CSV."""
-    try:
-        dataframe = validate_and_convert_to_dataframe(data, tab_name)
-        if dataframe is not None:
-            upload_to_google_sheets(sheet_id, tab_name, dataframe)
-            save_dataframe_to_csv(dataframe, f"{tab_name}.csv")
-        else:
-            logging.warning(f"{tab_name} data was not valid and was skipped.")
-    except Exception as e:
-        logging.error(f"Error uploading {tab_name} data to Google Sheets: {e}")
-
-if __name__ == "__main__":
-    save_all_data_to_google_sheets()
+else:
+    logging.error("No 'data' found in the response.")
