@@ -2,8 +2,8 @@ name: Run preopen Script
 
 on:
   schedule:
-    # Run every day at 10 PM IST, Monday to Friday
-   - cron: '30-45/5 3 * * 1-5'
+    # Run every day at 9:10 PM IST, Monday to Friday
+   - cron: '40 3 * * 1-5'
  # This cron schedule runs from 3:38 AM to 3:45 AM UTC, Monday to Friday  # This cron schedule runs at 9:30 PM UTC, which is 10:00 PM IST, Monday to Friday
   workflow_dispatch:  # Allows manual trigger of the workflow
 
